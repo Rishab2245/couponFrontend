@@ -7,7 +7,7 @@ function App() {
   
   const claimCoupon = async () => {
     try {
-      const response = await axios.get('/claim');
+      const response = await axios.get('https://couponbackend-n276.onrender.com/claim');
       if(response.data.success){
         setCoupon(response.data.coupon);
         setMessage('Coupon claimed successfully!');
